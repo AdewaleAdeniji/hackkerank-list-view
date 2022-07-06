@@ -5,3 +5,12 @@ li {
     font-size: 20px;
     height: 30px;
 }
+ul li {
+    text-align: center;
+}
+ul li:nth-child(3n) {
+    color: red;
+}
+#alert {
+    display: none;
+}

@@ -22,6 +22,7 @@ const getElem = (id) => {
     return document.getElementById(id);
 }
 const addedToList = () => {
-    getElem('input').value = "";
     getElem('alert').style.display = 'none';
+    getElem('input').value = "";
 }
+document.getElementById('button').addEventListener('click',addToList);

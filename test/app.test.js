@@ -44,6 +44,7 @@ describe('List View', () => {
         })
         await loadDom(dom)
         container = dom.window.document.body;
+        console.log(container);
         button = getByTestId(container, 'button');
         input = getByTestId(container, 'input');
     })
@@ -51,6 +52,7 @@ describe('List View', () => {
     it('should show alert message "Please provide the valid input" for the invalid or empty input after clicking on Insert button', () => {
         const alertBox = getByTestId(container, 'alert');
         let computed = getComputedStyle(alertBox);
+        console.log(computed.getPropertyValue('display'));
         expect(computed.getPropertyValue('display')).toEqual('none');
         addInput('');
         fireEvent.click(button);
